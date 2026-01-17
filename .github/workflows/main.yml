@@ -1,0 +1,13 @@
+on:   push
+name: webapp
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+    steps:
+       - name: Checkout
+         uses: actions/checkout@v6.0.2
+       - name: Setup Node.js environment
+         uses: actions/setup-node@v6.2.0
+       - run: npm ci && npm run build
+    
+    
