@@ -1,0 +1,15 @@
+on:   push
+name: webapp
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+    steps:
+       - name: Checkout
+         uses: actions/checkout@v6.0.2
+       - name: Azure WebApp
+         uses: Azure/webapps-deploy@v3.0.6
+         with:
+           app-name: narottam-webapp
+          
+           
+    
